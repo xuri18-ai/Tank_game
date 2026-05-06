@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>卡通坦克大战</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero-panel" aria-label="游戏介绍">
+        <p class="eyebrow">Cartoon Tank Battle</p>
+        <h1>卡通坦克大战</h1>
+        <p class="subtitle">
+          驾驶糖果色坦克穿越积木战场，躲开敌军炮弹，击败所有会巡逻的泡泡坦克！
+        </p>
+        <div class="controls-card">
+          <h2>操作说明</h2>
+          <ul>
+            <li><kbd>WASD</kbd> 或 <kbd>方向键</kbd>：移动与瞄准</li>
+            <li><kbd>空格</kbd>：发射彩虹炮弹</li>
+            <li><kbd>Enter</kbd>：重新开始</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="play-panel" aria-label="坦克大战游戏区域">
+        <div class="hud" aria-live="polite">
+          <div>
+            <span class="hud-label">得分</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span class="hud-label">生命</span>
+            <strong id="lives">3</strong>
+          </div>
+          <div>
+            <span class="hud-label">敌军</span>
+            <strong id="enemies">0</strong>
+          </div>
+        </div>
+        <canvas id="gameCanvas" width="900" height="600" aria-label="卡通坦克大战画布"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <h2 id="overlayTitle">准备出击！</h2>
+            <p id="overlayText">按 Enter 开始，消灭所有敌方坦克。</p>
+            <button id="startButton" type="button">开始游戏</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
